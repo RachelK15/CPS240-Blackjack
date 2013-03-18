@@ -1,2 +1,2 @@
-CPS240---Blackjack
+CPS240-Blackjack
 ==================
