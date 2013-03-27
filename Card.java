@@ -23,12 +23,16 @@ public class Card
 	{
 		return faceUp;
 	}
-	public Card(char faceValue, int gameValue, int suit, boolean faceUp)
+	public void setFaceDown()
+	{
+		faceUp = false;
+	}
+	public Card(char faceValue, int gameValue, int suit)
 	{
 		this.faceValue = faceValue;
 		this.gameValue = gameValue;
 		this.suit = suit;
-		this.faceUp = faceUp;
+		faceUp = true;
 		
 	}
 
