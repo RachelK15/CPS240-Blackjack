@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Deck 
 {
 		private int numberCardsLeft;
@@ -11,7 +11,18 @@ public class Deck
 	}
 	public void shuffle()
 	{
-		// done by Rachel 
+		Card temp = null;
+		int index1, index2;
+		Random rand = new Random();
+		int switches = Math.abs(rand.nextInt()) + 1000;
+		for(long i = 0; i < switches; i++)
+		{
+			index1 = rand.nextInt(52);
+			index2 = rand.nextInt(52);
+			temp = cards[index1];
+			cards[index1] = cards[index2];
+			cards[index2] = temp;
+		}
 	}
 	public Deck()
 	{
