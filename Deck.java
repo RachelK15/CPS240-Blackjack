@@ -27,11 +27,43 @@ public class Deck
 	public Deck()
 	{
 		cards= new Card[52];
-		// Car (face value , game value , suit (1.Spades 2.Clubs 3.Hearts 4.Diamonds)
-		// create a for loop for all 52 cards
-		// don't forget J Q K A
+		// Card (face value , game value , suit (1.Spades 2.Clubs 3.Hearts 4.Diamonds)
 		cards[0]= new Card((char)'A',1,1);
-		cards[1]= new Card((char)2,2,1);
+		cards[1]= new Card((char)'J',10,1);
+		cards[2]= new Card((char)'Q',10,1);
+		cards[3]= new Card((char)'K',10,1);
+		cards[4]= new Card((char)'A',1,2);
+		cards[5]= new Card((char)'J',10,2);
+		cards[6]= new Card((char)'Q',10,2);
+		cards[7]= new Card((char)'K',10,2);
+		cards[8]= new Card((char)'A',1,3);
+		cards[9]= new Card((char)'J',10,3);
+		cards[10]= new Card((char)'Q',10,3);
+		cards[11]= new Card((char)'K',10,3);
+		cards[12]= new Card((char)'A',1,4);
+		cards[13]= new Card((char)'J',10,4);
+		cards[14]= new Card((char)'Q',10,4);
+		cards[15]= new Card((char)'K',10,4);
+		
+		int s = 1;	//s = suit
+		int i = 16; //temp value for card index
+		while(s <=4)
+		do
+		{
+			
+			while (i < 52)
+				do
+				{
+					//for loop to create cards with value 2-10
+					for(int j=2; j <10; j++)
+					{
+						card[i] = new Card((char)j,j,s);
+						i++;
+					}
+					s++;//change suite
+				}
+		
+		}
 	
 		cardsUsed = new Card[52];
 		
