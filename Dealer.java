@@ -47,7 +47,7 @@ public class Dealer
     
     /**
      * Requests the bet from the player.
-     * @return -1 Invalid input; 0 Not enough money; else Good bet
+     * @return -1 Invalid input; -2 Not enough money; else Good bet
      */
     public int requestBet()
     {
@@ -67,7 +67,7 @@ public class Dealer
         if(players[0].placeBet(bet) == true)
         	return bet;
         else
-        	return 0;
+        	return -2;
     }//end requestBet
     
     /**

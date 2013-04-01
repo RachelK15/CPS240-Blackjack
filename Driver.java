@@ -20,10 +20,12 @@ public class Driver
 			while(betInfo <= 0)
 			{
 				betInfo = dealer.requestBet();
-				if(betInfo == 0)
+				if(betInfo == -2)
 					System.out.println("You do not have enough money.");
 				else if(betInfo == -1)
 					System.out.println("Invalid input.");
+				else if(betInfo == 0)
+					System.out.println("Your bet must be at least $1.");
 			}//end while
 			dealer.dealInitial();
 			endHand = false;
