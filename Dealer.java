@@ -170,10 +170,10 @@ public class Dealer
 			        {
 			        	//Player Loses
 	    				if(hand.getHandValue() == players[0].hand.getHandValue())
-	    					System.out.println("You and the Dealer tied. Sorry, you lost.");
+	    					System.out.println("You and the Dealer tied. Sorry");
 	    				else
-	    					System.out.println("Sorry, you lost.");
-			            players[0].adjustMoney(-1 * players[0].getBetValue());
+	    					{System.out.println("Sorry, you lost.");
+	    					players[0].adjustMoney(-1 * players[0].getBetValue());}
 			        }//end if
 			        else
 			        {
